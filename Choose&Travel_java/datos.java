@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 /**
  * Write a description of class datos here.
  * 
@@ -15,7 +17,7 @@ public class datos
     public datos()
     {
     }
-    public void leerString(){
+    public String leerString(){
         Scanner intro = new Scanner(System.in);
         String cadena=intro.nextLine();
         return cadena;
@@ -26,6 +28,16 @@ public class datos
         Matcher mat = pat.matcher(oper);
         if (mat.matches()==false) {
             System.out.println("Rut ingresado incorrecto. intente de nuevo.");
+            return false;
+        }
+        return true;
+    }
+     public static boolean valNewUs(String oper)
+    {
+        Pattern pat = Pattern.compile("^[a-z]+"+"\\|{1}"+"[a-z]+$");
+        Matcher mat = pat.matcher(oper);
+        if (mat.matches()==false) {
+            System.out.println("Ingresado incorrecto. intente de nuevo.");
             return false;
         }
         return true;
