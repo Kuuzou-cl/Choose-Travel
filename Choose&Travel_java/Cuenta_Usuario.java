@@ -1,11 +1,11 @@
 
-public class Cuenta_Usuario
+public class Cuenta
 {
     private String user;
     private String pass;
     private boolean admin;
 
-    public Cuenta_Usuario()
+    public Cuenta()
     {
         user=null;
         pass=null;
