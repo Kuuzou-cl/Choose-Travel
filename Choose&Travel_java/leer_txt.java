@@ -13,19 +13,18 @@ import java.io.*;
  */
 public class leer_txt {
 
-    public void main(String txtName) {
+    public void leer(String txtName) {
         try {
             FileReader r = new FileReader(txtName);
             BufferedReader buffer = new BufferedReader(r);
-            System.out.println(buffer.readLine());//se tiene que guardar la linea en un array de String
             String cont = "";
-            while (cont != null) {
-                cont = buffer.readLine();
-                if (cont == null) {
+            while (cont != null) {//un ciclo para leer todas las lineas
+                cont = buffer.readLine();//se guarda la info de la linea en un String (en futuro un array de String)
+                if (cont == null) {//valida que exista informacion en la linea
                     break;
                 }
             }
-        } catch (Exception e) {
+        } catch (Exception e) {//En caso de que el archivo no exista 
             System.out.println(e.getMessage());
         };
     }
