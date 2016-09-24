@@ -64,18 +64,14 @@ public class Cuenta
     }
     
 
-   public void agregarCuenta(String user, String pass, String info, boolean admin)
+   public void agregarCuenta(String user, String pass, String info)
       {
          try
       {  
-         setUser(user);
-         setPass(pass);
-         setInfo(info);
-         setAdmin(admin);
- 
+
           BufferedWriter write=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(DatosCuenta,true), "utf-8"));  
  
-          write.write(getUser()+"\t"+getPass()+"\t"+getInfo()+"\t"+getAdmin()+"\r\n");  
+          write.write(user+"|"+pass+"|"+info+"|"+"false"+"\r\n");  
            System.out.println("La cuenta ha sido agregada exitosamente");          
           write.close();
           
@@ -95,16 +91,12 @@ public class Cuenta
          BufferedReader read = new BufferedReader (new FileReader(DatosCuenta));    
          while( (linea = read.readLine()) != null)
          {
-            System.out.println(linea);
             StringTokenizer split = new StringTokenizer(linea, "|");
+            
             String           userStr =  split.nextToken().trim();
-             System.out.println(userStr);
             String  passStr =  split.nextToken().trim();
-            System.out.println(passStr);
             String       infoStr =  split.nextToken();
-             System.out.println(infoStr);
             String     adminStr =  split.nextToken().trim();
-            System.out.println(adminStr);
             
             boolean    admin=Boolean.parseBoolean(adminStr);
             
@@ -140,16 +132,30 @@ public class Cuenta
    public void modificar_txt()
   {
     try{  
-       if( cuentas.size()==0){txt_array();}
+        txt_array();
         Scanner intro =new Scanner(System.in).useDelimiter("\n");            
         int op=10;        
-        while(op!=4)
+        while(op!=5)
              {
                menuAdmin();
                op=intro.nextInt();
                switch(op)
                {
-                    case 1: System.out.println("Introducir el usuario a modificar:");      
+                   case 1: System.out.println("Introducir nuevo usuario:"); 
+                    String newUs=intro.nextLine();
+                    newUs=intro.nextLine();
+                    //validar
+                    System.out.println("Introducir contraseña");
+                    String newPas=intro.nextLine();
+                    System.out.println("Ingresar informacion de usuario");
+                    String newIn=intro.nextLine();
+                    agregarCuenta(newUs,newPas,newIn);
+                    cuentas.clear();
+                    txt_array();
+                   
+                    break;
+                   
+                   case 2: System.out.println("Introducir el usuario a modificar:");      
                    String    us=intro.nextLine();
                    System.out.println("Introducir nueva contraseña:");
                    String    newPass=intro.nextLine();        
@@ -169,7 +175,7 @@ public class Cuenta
                     }
                     break;
                     
-                    case 2: System.out.println("Introducir el usuario a modificar:");      
+                    case 3: System.out.println("Introducir el usuario a modificar:");      
                     String    us2=intro.nextLine();
                     System.out.println("Introducir nueva informacion:");      
                     String newInfo=intro.next();        
@@ -189,7 +195,7 @@ public class Cuenta
                     }
                     break;
                     
-                    case 3: System.out.println("Inserte el usuario de la cuenta ha borrar");
+                    case 4: System.out.println("Inserte el usuario de la cuenta ha borrar");
                             String us3=intro.nextLine();   
                     try{
                       BufferedWriter write = new BufferedWriter(new FileWriter(DatosCuenta));
@@ -213,12 +219,13 @@ public class Cuenta
                     
                     break;  
                     
-                    case 4: System.out.println("Guardando");
+                    case 5: System.out.println("Guardando");
                     try{
                       BufferedWriter write = new BufferedWriter(new FileWriter(DatosCuenta));
+                      write.write("");
                       for(Cuenta n:cuentas)
                       {
-                          write.write(n.getUser()+ "\t"+n.getPass()+ "\t"+ n.getInfo()+ "\t"+ n.getAdmin()+"\r\n");  
+                          write.write(n.getUser()+ "|"+n.getPass()+ "|"+ n.getInfo()+ "|"+ n.getAdmin()+"\r\n");  
                       }
                       write.close();
                      }catch (Exception ex) 
@@ -239,15 +246,19 @@ public class Cuenta
   private void menuAdmin()
    {
      System.out.println("--------Menu de configuracion-------");
-     System.out.println("1. Modificar password");
-     System.out.println("2. Modificar informacion de usuario ");
-     System.out.println("3. Eliminar Cuenta");
-     System.out.println("4. Guardar y Salir");
+     System.out.println("1. Agregar cuenta");
+     System.out.println("2. Modificar password");
+     System.out.println("3. Modificar informacion de usuario ");
+     System.out.println("4. Eliminar Cuenta");
+     System.out.println("5. Guardar y Salir");
    }
+   
+  private void menuUser()
+  {
+    }
 
   public  void inicio() 
    {       
-       syncArrayList();
-       System.out.println(cuentas.get(0).getUser());
+       modificar_txt();
     }
 }
