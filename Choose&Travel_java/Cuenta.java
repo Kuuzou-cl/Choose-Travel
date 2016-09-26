@@ -2,14 +2,15 @@ import java.io.*;
 import java.util.*;
 public class Cuenta
 { 
-     private      String    user;
+     private      String user;
      private      String pass;
      private      String info;
      private      boolean    admin;   
-     File   DatosCuenta= new File("cuentas.txt");
+     File         DatosCuenta= new File("cuentas.txt");
      ArrayList<Cuenta> cuentas =new ArrayList<Cuenta>();
-     Cuenta             objeto = null;
-    
+     Cuenta       objeto = null;
+     Scanner      intro = new Scanner(System.in);
+     datos dat =  new datos();
    public Cuenta(String user, String pass, String info, boolean admin)
     {
          this.user=user;
@@ -63,7 +64,7 @@ public class Cuenta
     }
     
 
-   public void agregarCuenta(String user, String pass, String info)
+   public void agregarCuenta(String user, String pass, String info)//Este metodo recibe 3 String que son el usuario,contraseña,informacion que son 
       {
          try
       {  
@@ -72,11 +73,11 @@ public class Cuenta
          setInfo(info);
          setAdmin(false);
  
-          BufferedWriter write=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(DatosCuenta,true), "utf-8"));  
+         BufferedWriter write=new BufferedWriter(new OutputStreamWriter(new FileOutputStream(DatosCuenta,true), "utf-8"));  
  
-          write.write(getUser()+"|"+getPass()+"|"+getInfo()+"|"+getAdmin()+"\r\n");  
-           System.out.println("La cuenta ha sido agregada exitosamente");          
-          write.close();
+         write.write(getUser()+"|"+getPass()+"|"+getInfo()+"|"+getAdmin()+"\r\n");  
+         System.out.println("La cuenta ha sido agregada exitosamente");          
+         write.close();
           
         }
         catch (Exception ex) 
@@ -90,6 +91,7 @@ public class Cuenta
      {
         try
         {
+         cuentas.clear();   
          String linea = null;
          BufferedReader read = new BufferedReader (new FileReader(DatosCuenta));    
          while( (linea = read.readLine()) != null)
@@ -133,9 +135,9 @@ public class Cuenta
    
    public void modificar_txt()
   {
+      
     try{  
-       txt_array();
-        Scanner intro =new Scanner(System.in).useDelimiter("\n");            
+       txt_array();           
         int op=10;        
         while(op!=5)
              {
@@ -144,20 +146,25 @@ public class Cuenta
                switch(op)
                {
                    case 1:
-                        System.out.println("Ingrese un nuevo usuario");
-                        String us0=intro.nextLine();
-                        us0=intro.nextLine();
+                        String us0="";
+                        do{
+                            System.out.println("Ingrese un nuevo usuario");
+                            us0=intro.nextLine();
+                            us0=intro.nextLine();
+                        }while(dat.valUs(us0)==false);
                         System.out.println("Ingrese la contraseña");
                         String pas0=intro.nextLine();
                         System.out.println("Ingrese la informacion del usuario");
                         String inf0=intro.nextLine();
                         agregarCuenta(us0,pas0,inf0);
-                        cuentas.clear();
-                        txt_array();
+                        syncArrayList();
                    break;
                    case 2: 
-                        System.out.println("Introducir el usuario a modificar:");      
-                        String    us=intro.nextLine();
+                        String    us="";
+                        do{
+                            System.out.println("Introducir el usuario a modificar:");      
+                            us=intro.nextLine();
+                        }while(dat.valUs(us)==false);
                         boolean existCuen1 =false;
                         for(Cuenta n:cuentas)
                         {
@@ -178,8 +185,11 @@ public class Cuenta
                             }
                         break;
                     case 3: 
-                        System.out.println("Introducir el usuario a modificar:");      
-                        String    us2=intro.nextLine();
+                        String    us2="";
+                        do{
+                            System.out.println("Introducir el usuario a modificar:");      
+                            us2=intro.nextLine();
+                        }while(dat.valUs(us2)==false);
                          boolean existCuen2 =false;
                          for(Cuenta n:cuentas)
                         {
@@ -200,22 +210,25 @@ public class Cuenta
                             }
                         break;
                     case 4: 
-                        System.out.println("Inserte el usuario de la cuenta ha borrar");
-                        String us3=intro.nextLine();   
+                        String us3="";
+                        do{
+                            System.out.println("Inserte el usuario de la cuenta ha borrar");
+                            us3=intro.nextLine();
+                            us3=intro.nextLine();
+                        }while(dat.valUs(us3)==false);   
                         try{
                             BufferedWriter write = new BufferedWriter(new FileWriter(DatosCuenta));
                             for(Cuenta n:cuentas)
                             {  
-                                if(n.getUser()!=us3){
-                                    write.write(n.getUser()+ "\t"+n.getPass()+ "\t"+ n.getInfo()+ "\t"+ n.getAdmin()+"\r\n");
+                                if(n.getUser().equals(us3)){
+                                    System.out.println("La cuenta ha sido eliminada");
                                 }else{
-                                    System.out.println("La cuenta ha sido eliminado");
+                                     write.write(n.getUser()+ "|"+n.getPass()+ "|"+ n.getInfo()+ "|"+ n.getAdmin()+"\r\n");
                                 }
                             }
                             write.close();
                             cuentas.clear();
                             txt_array();
-                      
                         }catch (Exception ex) 
                         {  
                             //Captura un posible error le imprime en pantalla   
@@ -223,20 +236,7 @@ public class Cuenta
                         }
                         break;  
                     case 5: 
-                        System.out.println("Guardando");
-                        try{
-                            BufferedWriter write = new BufferedWriter(new FileWriter(DatosCuenta));
-                            for(Cuenta n:cuentas)
-                            {
-                                write.write(n.getUser()+ "|"+n.getPass()+ "|"+ n.getInfo()+ "|"+ n.getAdmin()+"\r\n");  
-                            }
-                            write.close();
-                        }catch (Exception ex) 
-                        {  
-                            //Captura un posible error le imprime en pantalla   
-                            System.out.println(ex.getMessage());  
-                        }
-                        System.exit(0);
+                       guardar();
                     }
                 } 
         }catch (Exception ex) 
@@ -262,16 +262,17 @@ public class Cuenta
     }
   public void modificar_txtUs(){
     txt_array();
-    Scanner intro = new Scanner(System.in);
     int op=10;
         while(op!=2){
                   menuUs();
                    op=intro.nextInt();
              switch(op){      
                   case 1:
-                    System.out.println("Introducir el usuario a modificar:");      
-                   String    us=intro.nextLine();
-                   us=intro.nextLine();
+                  String    us="";
+                    do{
+                        System.out.println("Introducir el usuario a modificar:");     
+                        us=intro.nextLine();
+                    }while(dat.valUs(us)==false);
                    boolean existCuen3 =false;        
                     for(Cuenta n:cuentas)
                     {
@@ -291,29 +292,49 @@ public class Cuenta
                             System.out.println("El usuario no se ha encontrado");
                             }
                     break;
-                    case 2:
-                    System.out.println("Guardando");
-                    try{
-                      BufferedWriter write = new BufferedWriter(new FileWriter(DatosCuenta));
-                      for(Cuenta n:cuentas)
-                      {
-                          write.write(n.getUser()+ "|"+n.getPass()+ "|"+ n.getInfo()+ "|"+ n.getAdmin()+"\r\n");  
-                      }
-                      write.close();
-                     }catch (Exception ex) 
-                    {  
-                      //Captura un posible error le imprime en pantalla   
-                      System.out.println(ex.getMessage());  
-                    }
-                    System.exit(0);
+                    case 2:guardar();
                 }
             }
     }
-    
+  private void guardar(){
+    System.out.println("Guardando");
+      try{
+         BufferedWriter write = new BufferedWriter(new FileWriter(DatosCuenta));
+          for(Cuenta n:cuentas)
+           {
+             write.write(n.getUser()+ "|"+n.getPass()+ "|"+ n.getInfo()+ "|"+ n.getAdmin()+"\r\n");  
+           }
+         write.close();
+        }catch (Exception ex) 
+        {  
+         //Captura un posible error le imprime en pantalla   
+        System.out.println(ex.getMessage());  
+         }
+                    System.exit(0);
+    }
   public  void inicio() 
    {       
        syncArrayList();
-       System.out.println(cuentas.get(0).getUser());
-       modificar_txt();
+       login();
     }
-}
+  public void login(){
+     String use="";
+    do{
+     System.out.println("Ingrese usuario");
+     use=intro.nextLine();
+    }while(dat.valUs(use)==false);
+     for(Cuenta n:cuentas){
+       if(n.getUser().equals(use)){
+        System.out.println("Ingrese contraseña");
+        String pas=intro.nextLine();
+        if(n.getPass().equals(pas)){
+         if(n.getAdmin()==true){
+            modificar_txt();
+            }else{
+            modificar_txtUs();
+            }
+        }
+      }  
+    }
+  }
+} 
