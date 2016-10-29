@@ -19,6 +19,7 @@ public class Dat_cuentas {
 
     public ArrayList syncArrayList(ArrayList cuentas) {
         cuentas.clear();
+        txt_array(cuentas);
         return cuentas;
     }
 
