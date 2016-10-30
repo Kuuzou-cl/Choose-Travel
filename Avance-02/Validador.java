@@ -1,5 +1,6 @@
 package chooseandtravel;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -49,13 +50,23 @@ public class Validador {
             try {
                 Scanner intro = new Scanner(System.in);
                 num = intro.nextInt();
-                x=true;
+                x = true;
             } catch (Exception e) {
                 System.out.println("Opcion ingresada incorrecta, intente denuevo");
-                x=false;
+                x = false;
             }
-        } while (x==false);
+        } while (x == false);
         return num;
+    }
+
+    public boolean existUs(ArrayList cuentas, String us) {
+        for (int i = 0; i < cuentas.size(); i++) {
+            if (((Cuenta) cuentas.get(i)).getUser().equals(us)) {
+                System.out.println("El usuario ingresado no esta disponible");
+                return false;
+            }
+        }
+        return true;
     }
 
 }

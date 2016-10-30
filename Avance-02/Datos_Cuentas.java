@@ -58,7 +58,7 @@ public class Datos_Cuentas {
             System.out.println("Ingrese un nuevo usuario");
             us0 = intro.nextLine();
             us0 = intro.nextLine();
-        } while (validar.valUs(us0) == false);
+        } while (validar.valUs(us0) == false && validar.existUs(cuentas,us0)==false);
         System.out.println("Ingrese la contraseña");
         String pas0 = intro.nextLine();
         String inf0;
@@ -192,7 +192,7 @@ public class Datos_Cuentas {
         }
     }
 
-    public void menu1UserCase1(ArrayList sucursales, ArrayList viajes) {
+    public void menu1UserCase1(ArrayList sucursales, ArrayList viajes,String user) {
         System.out.println("------------------->Ingresar codigo de origen del viaje");
         mSuc.mostrarSucursales(sucursales);
         int codOrigen = validar.leerInt();
@@ -226,27 +226,28 @@ public class Datos_Cuentas {
         if(codDia>9&&codMes<10){
             fecha=(Integer.toString(codDia)+"0"+Integer.toString(codMes));
         }
-        if(codDia<10||codMes<10){
+        if(codDia<10&&codMes<10){
             fecha=("0"+Integer.toString(codDia)+"0"+Integer.toString(codMes));
         }
         System.out.println("------------------->Ingresar numero de asiento");
         int codAsiento = validar.leerInt();
-        System.out.println("Viaje solicitado para el "+codDia+"/"+codMes+"/"+codAño+" a las "+horario.substring(0,1)+":"+horario.substring(2,3));
-        mViaj.agregarViaje(origen,destino,horario,fecha,codAsiento);
+        System.out.println("Viaje solicitado para el "+codDia+"/"+codMes+"/"+codAño+" a las "+horario.substring(0,2)+":"+horario.substring(2,4));
+        mViaj.agregarViaje(origen,destino,horario,fecha,codAsiento,user);
+        mViaj.syncArrayViajes(viajes);
     }
 
-    public void menu1User(ArrayList viajes, ArrayList sucursales) {
+    public void menu1User(ArrayList viajes, ArrayList sucursales, String use) {
         int resp1 = 10;
         Cliente.menuUs1();
         resp1 = validar.leerInt();
         switch (resp1) {
-            case 1: menu1UserCase1(sucursales,viajes);
+            case 1: menu1UserCase1(sucursales,viajes, use);
                 break;
             case 2:
                 break;
-            case 3:
+            case 3:mViaj.mostrarViajes(viajes, true, use);
                 break;
-            case 4:
+            case 4:mViaj.mostrarViajes(viajes, null, use);
                 break;
             case 5:
                 break;
@@ -294,7 +295,7 @@ public class Datos_Cuentas {
             resp = validar.leerInt();
             switch (resp) {
                 case 1:
-                    menu1User(viajes, sucursales);
+                    menu1User(viajes, sucursales, use);
                     break;
                 case 2:
                     menu2User(cuentas, use);

@@ -1,1 +1,1 @@
-turbus|santiago|antofagasta|1230|01011|3|null
+turbus|santiago|concepcion|1230|0111|3|null
