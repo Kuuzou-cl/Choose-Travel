@@ -1,0 +1,300 @@
+turbus|santiago|temuco|0730|2910
+turbus|santiago|temuco|1230|2910
+turbus|santiago|temuco|1930|2910
+turbus|santiago|concepcion|0730|2910
+turbus|santiago|concepcion|1230|2910
+turbus|santiago|concepcion|1930|2910
+turbus|santiago|puerto montt|0730|2910
+turbus|santiago|puerto montt|1230|2910
+turbus|santiago|puerto montt|1930|2910
+turbus|santiago|antofagasta|0730|2910
+turbus|santiago|antofagasta|1230|2910
+turbus|santiago|antofagasta|1930|2910
+turbus|temuco|santiago|0730|2910
+turbus|temuco|santiago|1230|2910
+turbus|temuco|santiago|1930|2910
+turbus|temuco|concepcion|0730|2910
+turbus|temuco|concepcion|1230|2910
+turbus|temuco|concepcion|1930|2910
+turbus|temuco|puerto montt|0730|2910
+turbus|temuco|puerto montt|1230|2910
+turbus|temuco|puerto montt|1930|2910
+turbus|temuco|antofagasta|0730|2910
+turbus|temuco|antofagasta|1230|2910
+turbus|temuco|antofagasta|1930|2910
+turbus|concepcion|santiago|0730|2910
+turbus|concepcion|santiago|1230|2910
+turbus|concepcion|santiago|1930|2910
+turbus|concepcion|temuco|0730|2910
+turbus|concepcion|temuco|1230|2910
+turbus|concepcion|temuco|1930|2910
+turbus|concepcion|puerto montt|0730|2910
+turbus|concepcion|puerto montt|1230|2910
+turbus|concepcion|puerto montt|1930|2910
+turbus|concepcion|antofagasta|0730|2910
+turbus|concepcion|antofagasta|1230|2910
+turbus|concepcion|antofagasta|1930|2910
+turbus|puerto montt|santiago|0730|2910
+turbus|puerto montt|santiago|1230|2910
+turbus|puerto montt|santiago|1930|2910
+turbus|puerto montt|temuco|0730|2910
+turbus|puerto montt|temuco|1230|2910
+turbus|puerto montt|temuco|1930|2910
+turbus|puerto montt|concepcion|0730|2910
+turbus|puerto montt|concepcion|1230|2910
+turbus|puerto montt|concepcion|1930|2910
+turbus|puerto montt|antofagasta|0730|2910
+turbus|puerto montt|antofagasta|1230|2910
+turbus|puerto montt|antofagasta|1930|2910
+turbus|antofagasta|santiago|0730|2910
+turbus|antofagasta|santiago|1230|2910
+turbus|antofagasta|santiago|1930|2910
+turbus|antofagasta|temuco|0730|2910
+turbus|antofagasta|temuco|1230|2910
+turbus|antofagasta|temuco|1930|2910
+turbus|antofagasta|concepcion|0730|2910
+turbus|antofagasta|concepcion|1230|2910
+turbus|antofagasta|concepcion|1930|2910
+turbus|antofagasta|puerto montt|0730|2910
+turbus|antofagasta|puerto montt|1230|2910
+turbus|antofagasta|puerto montt|1930|2910
+turbus|santiago|temuco|0730|3010
+turbus|santiago|temuco|1230|3010
+turbus|santiago|temuco|1930|3010
+turbus|santiago|concepcion|0730|3010
+turbus|santiago|concepcion|1230|3010
+turbus|santiago|concepcion|1930|3010
+turbus|santiago|puerto montt|0730|3010
+turbus|santiago|puerto montt|1230|3010
+turbus|santiago|puerto montt|1930|3010
+turbus|santiago|antofagasta|0730|3010
+turbus|santiago|antofagasta|1230|3010
+turbus|santiago|antofagasta|1930|3010
+turbus|temuco|santiago|0730|3010
+turbus|temuco|santiago|1230|3010
+turbus|temuco|santiago|1930|3010
+turbus|temuco|concepcion|0730|3010
+turbus|temuco|concepcion|1230|3010
+turbus|temuco|concepcion|1930|3010
+turbus|temuco|puerto montt|0730|3010
+turbus|temuco|puerto montt|1230|3010
+turbus|temuco|puerto montt|1930|3010
+turbus|temuco|antofagasta|0730|3010
+turbus|temuco|antofagasta|1230|3010
+turbus|temuco|antofagasta|1930|3010
+turbus|concepcion|santiago|0730|3010
+turbus|concepcion|santiago|1230|3010
+turbus|concepcion|santiago|1930|3010
+turbus|concepcion|temuco|0730|3010
+turbus|concepcion|temuco|1230|3010
+turbus|concepcion|temuco|1930|3010
+turbus|concepcion|puerto montt|0730|3010
+turbus|concepcion|puerto montt|1230|3010
+turbus|concepcion|puerto montt|1930|3010
+turbus|concepcion|antofagasta|0730|3010
+turbus|concepcion|antofagasta|1230|3010
+turbus|concepcion|antofagasta|1930|3010
+turbus|puerto montt|santiago|0730|3010
+turbus|puerto montt|santiago|1230|3010
+turbus|puerto montt|santiago|1930|3010
+turbus|puerto montt|temuco|0730|3010
+turbus|puerto montt|temuco|1230|3010
+turbus|puerto montt|temuco|1930|3010
+turbus|puerto montt|concepcion|0730|3010
+turbus|puerto montt|concepcion|1230|3010
+turbus|puerto montt|concepcion|1930|3010
+turbus|puerto montt|antofagasta|0730|3010
+turbus|puerto montt|antofagasta|1230|3010
+turbus|puerto montt|antofagasta|1930|3010
+turbus|antofagasta|santiago|0730|3010
+turbus|antofagasta|santiago|1230|3010
+turbus|antofagasta|santiago|1930|3010
+turbus|antofagasta|temuco|0730|3010
+turbus|antofagasta|temuco|1230|3010
+turbus|antofagasta|temuco|1930|3010
+turbus|antofagasta|concepcion|0730|3010
+turbus|antofagasta|concepcion|1230|3010
+turbus|antofagasta|concepcion|1930|3010
+turbus|antofagasta|puerto montt|0730|3010
+turbus|antofagasta|puerto montt|1230|3010
+turbus|antofagasta|puerto montt|1930|3010
+turbus|santiago|temuco|0730|3110
+turbus|santiago|temuco|1230|3110
+turbus|santiago|temuco|1930|3110
+turbus|santiago|concepcion|0730|3110
+turbus|santiago|concepcion|1230|3110
+turbus|santiago|concepcion|1930|3110
+turbus|santiago|puerto montt|0730|3110
+turbus|santiago|puerto montt|1230|3110
+turbus|santiago|puerto montt|1930|3110
+turbus|santiago|antofagasta|0730|3110
+turbus|santiago|antofagasta|1230|3110
+turbus|santiago|antofagasta|1930|3110
+turbus|temuco|santiago|0730|3110
+turbus|temuco|santiago|1230|3110
+turbus|temuco|santiago|1930|3110
+turbus|temuco|concepcion|0730|3110
+turbus|temuco|concepcion|1230|3110
+turbus|temuco|concepcion|1930|3110
+turbus|temuco|puerto montt|0730|3110
+turbus|temuco|puerto montt|1230|3110
+turbus|temuco|puerto montt|1930|3110
+turbus|temuco|antofagasta|0730|3110
+turbus|temuco|antofagasta|1230|3110
+turbus|temuco|antofagasta|1930|3110
+turbus|concepcion|santiago|0730|3110
+turbus|concepcion|santiago|1230|3110
+turbus|concepcion|santiago|1930|3110
+turbus|concepcion|temuco|0730|3110
+turbus|concepcion|temuco|1230|3110
+turbus|concepcion|temuco|1930|3110
+turbus|concepcion|puerto montt|0730|3110
+turbus|concepcion|puerto montt|1230|3110
+turbus|concepcion|puerto montt|1930|3110
+turbus|concepcion|antofagasta|0730|3110
+turbus|concepcion|antofagasta|1230|3110
+turbus|concepcion|antofagasta|1930|3110
+turbus|puerto montt|santiago|0730|3110
+turbus|puerto montt|santiago|1230|3110
+turbus|puerto montt|santiago|1930|3110
+turbus|puerto montt|temuco|0730|3110
+turbus|puerto montt|temuco|1230|3110
+turbus|puerto montt|temuco|1930|3110
+turbus|puerto montt|concepcion|0730|3110
+turbus|puerto montt|concepcion|1230|3110
+turbus|puerto montt|concepcion|1930|3110
+turbus|puerto montt|antofagasta|0730|3110
+turbus|puerto montt|antofagasta|1230|3110
+turbus|puerto montt|antofagasta|1930|3110
+turbus|antofagasta|santiago|0730|3110
+turbus|antofagasta|santiago|1230|3110
+turbus|antofagasta|santiago|1930|3110
+turbus|antofagasta|temuco|0730|3110
+turbus|antofagasta|temuco|1230|3110
+turbus|antofagasta|temuco|1930|3110
+turbus|antofagasta|concepcion|0730|3110
+turbus|antofagasta|concepcion|1230|3110
+turbus|antofagasta|concepcion|1930|3110
+turbus|antofagasta|puerto montt|0730|3110
+turbus|antofagasta|puerto montt|1230|3110
+turbus|antofagasta|puerto montt|1930|3110
+turbus|santiago|temuco|0730|0111
+turbus|santiago|temuco|1230|0111
+turbus|santiago|temuco|1930|0111
+turbus|santiago|concepcion|0730|0111
+turbus|santiago|concepcion|1230|0111
+turbus|santiago|concepcion|1930|0111
+turbus|santiago|puerto montt|0730|0111
+turbus|santiago|puerto montt|1230|0111
+turbus|santiago|puerto montt|1930|0111
+turbus|santiago|antofagasta|0730|0111
+turbus|santiago|antofagasta|1230|0111
+turbus|santiago|antofagasta|1930|0111
+turbus|temuco|santiago|0730|0111
+turbus|temuco|santiago|1230|0111
+turbus|temuco|santiago|1930|0111
+turbus|temuco|concepcion|0730|0111
+turbus|temuco|concepcion|1230|0111
+turbus|temuco|concepcion|1930|0111
+turbus|temuco|puerto montt|0730|0111
+turbus|temuco|puerto montt|1230|0111
+turbus|temuco|puerto montt|1930|0111
+turbus|temuco|antofagasta|0730|0111
+turbus|temuco|antofagasta|1230|0111
+turbus|temuco|antofagasta|1930|0111
+turbus|concepcion|santiago|0730|0111
+turbus|concepcion|santiago|1230|0111
+turbus|concepcion|santiago|1930|0111
+turbus|concepcion|temuco|0730|0111
+turbus|concepcion|temuco|1230|0111
+turbus|concepcion|temuco|1930|0111
+turbus|concepcion|puerto montt|0730|0111
+turbus|concepcion|puerto montt|1230|0111
+turbus|concepcion|puerto montt|1930|0111
+turbus|concepcion|antofagasta|0730|0111
+turbus|concepcion|antofagasta|1230|0111
+turbus|concepcion|antofagasta|1930|0111
+turbus|puerto montt|santiago|0730|0111
+turbus|puerto montt|santiago|1230|0111
+turbus|puerto montt|santiago|1930|0111
+turbus|puerto montt|temuco|0730|0111
+turbus|puerto montt|temuco|1230|0111
+turbus|puerto montt|temuco|1930|0111
+turbus|puerto montt|concepcion|0730|0111
+turbus|puerto montt|concepcion|1230|0111
+turbus|puerto montt|concepcion|1930|0111
+turbus|puerto montt|antofagasta|0730|0111
+turbus|puerto montt|antofagasta|1230|0111
+turbus|puerto montt|antofagasta|1930|0111
+turbus|antofagasta|santiago|0730|0111
+turbus|antofagasta|santiago|1230|0111
+turbus|antofagasta|santiago|1930|0111
+turbus|antofagasta|temuco|0730|0111
+turbus|antofagasta|temuco|1230|0111
+turbus|antofagasta|temuco|1930|0111
+turbus|antofagasta|concepcion|0730|0111
+turbus|antofagasta|concepcion|1230|0111
+turbus|antofagasta|concepcion|1930|0111
+turbus|antofagasta|puerto montt|0730|0111
+turbus|antofagasta|puerto montt|1230|0111
+turbus|antofagasta|puerto montt|1930|0111
+turbus|santiago|temuco|0730|0211
+turbus|santiago|temuco|1230|0211
+turbus|santiago|temuco|1930|0211
+turbus|santiago|concepcion|0730|0211
+turbus|santiago|concepcion|1230|0211
+turbus|santiago|concepcion|1930|0211
+turbus|santiago|puerto montt|0730|0211
+turbus|santiago|puerto montt|1230|0211
+turbus|santiago|puerto montt|1930|0211
+turbus|santiago|antofagasta|0730|0211
+turbus|santiago|antofagasta|1230|0211
+turbus|santiago|antofagasta|1930|0211
+turbus|temuco|santiago|0730|0211
+turbus|temuco|santiago|1230|0211
+turbus|temuco|santiago|1930|0211
+turbus|temuco|concepcion|0730|0211
+turbus|temuco|concepcion|1230|0211
+turbus|temuco|concepcion|1930|0211
+turbus|temuco|puerto montt|0730|0211
+turbus|temuco|puerto montt|1230|0211
+turbus|temuco|puerto montt|1930|0211
+turbus|temuco|antofagasta|0730|0211
+turbus|temuco|antofagasta|1230|0211
+turbus|temuco|antofagasta|1930|0211
+turbus|concepcion|santiago|0730|0211
+turbus|concepcion|santiago|1230|0211
+turbus|concepcion|santiago|1930|0211
+turbus|concepcion|temuco|0730|0211
+turbus|concepcion|temuco|1230|0211
+turbus|concepcion|temuco|1930|0211
+turbus|concepcion|puerto montt|0730|0211
+turbus|concepcion|puerto montt|1230|0211
+turbus|concepcion|puerto montt|1930|0211
+turbus|concepcion|antofagasta|0730|0211
+turbus|concepcion|antofagasta|1230|0211
+turbus|concepcion|antofagasta|1930|0211
+turbus|puerto montt|santiago|0730|0211
+turbus|puerto montt|santiago|1230|0211
+turbus|puerto montt|santiago|1930|0211
+turbus|puerto montt|temuco|0730|0211
+turbus|puerto montt|temuco|1230|0211
+turbus|puerto montt|temuco|1930|0211
+turbus|puerto montt|concepcion|0730|0211
+turbus|puerto montt|concepcion|1230|0211
+turbus|puerto montt|concepcion|1930|0211
+turbus|puerto montt|antofagasta|0730|0211
+turbus|puerto montt|antofagasta|1230|0211
+turbus|puerto montt|antofagasta|1930|0211
+turbus|antofagasta|santiago|0730|0211
+turbus|antofagasta|santiago|1230|0211
+turbus|antofagasta|santiago|1930|0211
+turbus|antofagasta|temuco|0730|0211
+turbus|antofagasta|temuco|1230|0211
+turbus|antofagasta|temuco|1930|0211
+turbus|antofagasta|concepcion|0730|0211
+turbus|antofagasta|concepcion|1230|0211
+turbus|antofagasta|concepcion|1930|0211
+turbus|antofagasta|puerto montt|0730|0211
+turbus|antofagasta|puerto montt|1230|0211
+turbus|antofagasta|puerto montt|1930|0211

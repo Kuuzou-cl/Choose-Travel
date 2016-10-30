@@ -1,37 +1,53 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package proyecto;
+package chooseandtravel;
 
-/**
- *
- * @author juan
- */
 public class Cliente extends Cuenta {
+
     private String nombre;
     private int sucursal;
-    public Cliente(String us,String pas,String nom,int suc){
-    super(us,pas);    
-    this.nombre=nom;
-    this.sucursal=suc;
+
+    public Cliente(String u, String p, String n, int s) {
+        super(u, p);
+        this.nombre = n;
+        this.sucursal = s;
     }
-    public void setNombre(String name){
-    this.nombre=name;
+
+    public String getNombre() {
+        return this.nombre;
     }
-    public String getNombre(){
-    return this.nombre;
+
+    public int getSucursal() {
+        return this.sucursal;
     }
-    public void setSucursal(int n){
-    this.sucursal=n;
+
+    public void setNombre(String n) {
+        nombre = n;
     }
-    public int getSucursal(){
-    return this.sucursal;
+
+    public void setSucursal(int s) {
+        sucursal = s;
     }
-    public static void usMenu(){
-    System.out.println("---------Menu de configuracion--------");
-    System.out.println("1. Modificar password");
-    System.out.println("2. Guardar y  salir");
+    
+    public static void menuGeneral(){
+        System.out.println("---------Menu--------");
+        System.out.println("1. Menu de Viajes");
+        System.out.println("2. Configuracion de cuenta");
+        System.out.println("3. Guardar y  salir");
     }
+
+    public static void menuUs() {
+        System.out.println("---------Menu de configuracion--------");
+        System.out.println("1. Modificar password");
+        System.out.println("2. Guardar y  salir");
+    }
+    
+    public static void menuUs2(){
+        System.out.println("---------Menu de Viajes--------");
+        System.out.println("1. Solicitar Viaje");
+        System.out.println("2. Cancelar Viaje");
+        System.out.println("3. Mostra Viajes Aprobados");
+        System.out.println("4. Mostrar Viajes Pendientes");
+        System.out.println("5. Historial");
+        System.out.println("6. Guardar y  salir");
+    }
+
 }

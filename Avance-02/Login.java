@@ -1,34 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package proyecto;
-import java.util.*;
-/**
- *
- * @author juan
- */
+package chooseandtravel;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Login {
-    public void inicio(ArrayList cuentas) {
+
+    public void inicio(ArrayList cuentas, ArrayList sucursales, ArrayList buses, ArrayList viajes) {
         Scanner intro = new Scanner(System.in);
-        Dat_cuentas mCuentas=new Dat_cuentas();
+        Datos_Cuentas mCuentas = new Datos_Cuentas();
         Validador validar = new Validador();
         String use = "";
         do {
             System.out.println("Ingrese usuario");
             use = intro.nextLine();
         } while (validar.valUs(use) == false);
-        for (int i=0; i<cuentas.size();i++) {
-            if (((Cuenta)cuentas.get(i)).getUser().equals(use)) {
+        for (int n = 0; n<cuentas.size(); n++) {
+            if (((Cuenta)cuentas.get(n)).getUser().equals(use)) {
                 System.out.println("Ingrese contraseña");
                 String pas = intro.nextLine();
-                if (((Cuenta)cuentas.get(i)).getUser().equals(pas)) {
-                    if(((Admin)cuentas.get(i)).getAdmin() == true) {
-                        mCuentas.modificar_txt(cuentas);
+                if (((Cuenta)cuentas.get(n)).getPass().equals(pas)) {
+                    if (((Admin)cuentas.get(n)).getAdmin() == true) {
+                        mCuentas.modificar_txt(cuentas, sucursales,buses,viajes);
                     } else {
-                        mCuentas.modificar_txtUs(cuentas,use);
-}
+                        mCuentas.modificar_txtUs(cuentas,use,buses,viajes, sucursales);
+                    }
                 }
             }
         }
