@@ -29,19 +29,14 @@ public class Datos_Buses {
                 String strDestino = split.nextToken().trim();
                 String strHorario = split.nextToken().trim();
                 String strFecha = split.nextToken().trim();
-                int horario = Integer.parseInt(strHorario);
-                int fecha = Integer.parseInt(strFecha);
                 asientos=new ArrayList<Integer>();
                 for(int n=1;n<31;n++){
                     asientos.add(n);
-                }
-                
-                objetoB = new Bus(strEmpresa, strOrigen,strDestino,horario,fecha,asientos);
+                }  
+                objetoB = new Bus(strEmpresa, strOrigen,strDestino,strHorario,strFecha,asientos);
                 buses.add(objetoB);
-
             }
             read.close();
-
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }

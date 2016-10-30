@@ -3,8 +3,10 @@ package chooseandtravel;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
@@ -30,17 +32,13 @@ public class Datos_Viajes {
                 String strHorario = split.nextToken().trim();
                 String strFecha = split.nextToken().trim();
                 String strAsiento = split.nextToken().trim();
-                int horario = Integer.parseInt(strHorario);
-                int fecha = Integer.parseInt(strFecha);
+
                 int asiento = Integer.parseInt(strAsiento);
                 
-                
-                objetoV = new Viaje(strEmpresa, strOrigen,strDestino,horario,fecha,asiento);
+                objetoV = new Viaje(strEmpresa, strOrigen,strDestino,strHorario,strFecha,asiento);
                 viajes.add(objetoV);
-
             }
             read.close();
-
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
@@ -58,5 +56,19 @@ public class Datos_Viajes {
             System.out.println(ex.getMessage());
         }
         System.exit(0);
+    }
+    
+    public void agregarViaje(String origen, String destino, String horario, String fecha, int asiento){
+        try {
+
+            BufferedWriter write = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(DatosViajes, true), "utf-8"));
+
+            write.write("turbus" + "|" + origen + "|" + destino + "|" + horario+"|" + fecha +"|"+asiento+"|"+null+ "\r\n");
+            System.out.println("Viaje Solicitado");
+            write.close();
+
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 }

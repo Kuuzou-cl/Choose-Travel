@@ -6,12 +6,12 @@ class Viaje {
     private String empresa;
     private String origen;
     private String destino;
-    private int horario;
-    private int fecha;
+    private String horario;
+    private String fecha;
     private int asiento;
     private Boolean estado;
     
-    public Viaje(String e, String o, String d, int h, int f,int a){
+    public Viaje(String e, String o, String d, String h, String f,int a){
         this.empresa=e;
         this.origen=o;
         this.destino=d;
@@ -32,11 +32,11 @@ class Viaje {
         return destino;
     }
     
-    public int getHorario(){
+    public String getHorario(){
         return horario;
     }
     
-    public int getFecha(){
+    public String getFecha(){
         return fecha;
     }
     

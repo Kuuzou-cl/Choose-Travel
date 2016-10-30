@@ -8,11 +8,11 @@ public class Bus {
     private String empresa;
     private String origen;
     private String destino;
-    private int horario;
-    private int fecha;
+    private String horario;
+    private String fecha;
     private ArrayList<Integer> asientos;
     
-    public Bus(String e, String o, String d, int h, int f,ArrayList a){
+    public Bus(String e, String o, String d, String h, String f,ArrayList a){
         this.empresa=e;
         this.origen=o;
         this.destino=d;
@@ -33,11 +33,11 @@ public class Bus {
         return destino;
     }
     
-    public int getHorario(){
+    public String getHorario(){
         return horario;
     }
     
-    public int getFecha(){
+    public String getFecha(){
         return fecha;
     }
     

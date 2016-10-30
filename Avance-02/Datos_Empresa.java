@@ -75,10 +75,10 @@ public class Datos_Empresa {
         try {
             BufferedWriter write = new BufferedWriter(new FileWriter(DatosEmpresa));
             for (int n = 0; n < sucursales.size(); n++) {
-                if (((Sucursal) sucursales.get(n)).getCodigo()==(suc3)) {
+                if (((Sucursal) sucursales.get(n)).getCodigo() == (suc3)) {
                     System.out.println("La cuenta ha sido eliminada");
                 } else {
-                    write.write(((Sucursal) sucursales.get(n)).getNombre() + "|" + ((Sucursal) sucursales.get(n)).getCodigo() +"\r\n");
+                    write.write(((Sucursal) sucursales.get(n)).getNombre() + "|" + ((Sucursal) sucursales.get(n)).getCodigo() + "\r\n");
                 }
             }
             write.close();
@@ -87,7 +87,32 @@ public class Datos_Empresa {
             System.out.println(ex.getMessage());
         }
     }
-    
+
+    public void mostrarSucursales(ArrayList sucursales) {
+        if (sucursales.isEmpty()) {
+            syncSucursal(sucursales);
+        }
+        System.out.println("=========================== Sucursales ========================================================");
+        for (int n = 0; n < sucursales.size(); n++) {
+            System.out.println("Sucursal:" + ((Sucursal) sucursales.get(n)).getNombre() + "\t" + "Codigo:" + ((Sucursal) sucursales.get(n)).getCodigo());
+        }
+        System.out.println("======================================");
+    }
+
+    public void mostrarSucursales2(ArrayList sucursales, int codigo) {
+        if (sucursales.isEmpty()) {
+            syncSucursal(sucursales);
+        }
+        System.out.println("=========================== Sucursales ========================================================");
+        for (int n = 0; n < sucursales.size(); n++) {
+            if (((Sucursal) sucursales.get(n)).getCodigo() == (codigo)) {
+            } else {
+                System.out.println("Sucursal:" + ((Sucursal) sucursales.get(n)).getNombre() + "\t" + "Codigo:" + ((Sucursal) sucursales.get(n)).getCodigo());
+            }
+        }
+        System.out.println("======================================");
+    }
+
     public void guardarS(ArrayList sucursales) {
         System.out.println("Guardando");
         try {
@@ -101,6 +126,17 @@ public class Datos_Empresa {
             System.out.println(ex.getMessage());
         }
         System.exit(0);
+    }
+
+    public String getNombreCod(int codigo, ArrayList sucursales) {
+        String nombre = null;
+        for (int n = 0; n < sucursales.size(); n++) {
+            if (((Sucursal) sucursales.get(n)).getCodigo() == codigo) {
+                nombre = ((Sucursal) sucursales.get(n)).getNombre();
+                break;
+            }
+        }
+        return nombre;
     }
 
 }

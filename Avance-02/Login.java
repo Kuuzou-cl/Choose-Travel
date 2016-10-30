@@ -19,7 +19,7 @@ public class Login {
                 System.out.println("Ingrese contraseña");
                 String pas = intro.nextLine();
                 if (((Cuenta)cuentas.get(n)).getPass().equals(pas)) {
-                    if (((Admin)cuentas.get(n)).getAdmin() == true) {
+                    if (((Cuenta)cuentas.get(n)).getUser().equals("admin")) {
                         mCuentas.modificar_txt(cuentas, sucursales,buses,viajes);
                     } else {
                         mCuentas.modificar_txtUs(cuentas,use,buses,viajes, sucursales);

@@ -34,13 +34,13 @@ public class Cliente extends Cuenta {
         System.out.println("3. Guardar y  salir");
     }
 
-    public static void menuUs() {
+    public static void menuUs2() {
         System.out.println("---------Menu de configuracion--------");
         System.out.println("1. Modificar password");
         System.out.println("2. Guardar y  salir");
     }
     
-    public static void menuUs2(){
+    public static void menuUs1(){
         System.out.println("---------Menu de Viajes--------");
         System.out.println("1. Solicitar Viaje");
         System.out.println("2. Cancelar Viaje");
