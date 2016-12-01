@@ -1,0 +1,10 @@
+turbus|santiago|concepcion|12:30|02/11/2016|3|null|Javier Nualart
+turbus|santiago|temuco|12:30|01/11/2016|3|null|Javier Nualart
+turbus|concepcion|temuco|07:30|18/11/2016|2|null|Carlo Bernucci
+turbus|concepcion|temuco|07:30|25/11/2016|6|null|Carlo Bernucci
+turbus|santiago|temuco|07:30|29/10/2016|0|null|Carlo Bernucci
+turbus|santiago|temuco|07:30|29/10/2016|0|null|Carlo Bernucci
+turbus|santiago|temuco|07:30|29/10/2016|5|null|Carlo Bernucci
+turbus|santiago|temuco|07:30|29/10/2016|5|null|Carlo Bernucci
+turbus|santiago|temuco|07:30|29/10/2016|10|null|Carlo Bernucci
+turbus|santiago|temuco|07:30|29/10/2016|14|null|Carlo Bernucci
