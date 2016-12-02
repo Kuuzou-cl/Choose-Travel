@@ -1,0 +1,6 @@
+arica|01
+antofagasta|02
+santiago|07
+concepcion|09
+temuco|10
+puerto montt|13
