@@ -177,9 +177,11 @@ public class Datos_Cuentas {
                     write.write(((Admin) cuentas.get(n)).getUser() + "|" + ((Admin) cuentas.get(n)).getPass() + "|"  + "\r\n");
                 } else {
                     if (n + 1 == (cuentas.size())) {
-                        write.write(((Cliente) cuentas.get(n)).getUser() + "|" + ((Cliente) cuentas.get(n)).getPass() + "|" + ((Cliente) cuentas.get(n)).getNombre() + "|" + ((Cliente) cuentas.get(n)).getSucursal());
+                        write.write(((Cliente) cuentas.get(n)).getUser() + "|" + ((Cliente) cuentas.get(n)).getPass() 
+                      + "|" + ((Cliente) cuentas.get(n)).getNombre() + "|" + ((Cliente) cuentas.get(n)).getSucursal());
                     } else {
-                        write.write(((Cliente) cuentas.get(n)).getUser() + "|" + ((Cliente) cuentas.get(n)).getPass() + "|" + ((Cliente) cuentas.get(n)).getNombre() + "|" + ((Cliente) cuentas.get(n)).getSucursal() + "\r\n");
+                        write.write(((Cliente) cuentas.get(n)).getUser() + "|" + ((Cliente) cuentas.get(n)).getPass() 
+                   + "|" + ((Cliente) cuentas.get(n)).getNombre() + "|" + ((Cliente) cuentas.get(n)).getSucursal() + "\r\n");
                     }
                 }
             }
